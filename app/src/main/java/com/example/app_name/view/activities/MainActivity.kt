@@ -6,7 +6,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import com.example.app_name.R
 import com.example.app_name.view.activities.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -25,7 +24,7 @@ class MainActivity : BaseActivity() {
         val inflater = navHostFragment?.navController?.navInflater
         val graph = inflater?.inflate(R.navigation.mobile_navigation)
 
-        graph?.startDestination = R.id.navigation_home
+        graph?.startDestination = R.id.navigation_user
 
         if (graph != null) {
             navHostFragment?.navController?.graph = graph
@@ -38,10 +37,9 @@ class MainActivity : BaseActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+                R.id.navigation_user, R.id.navigation_user_detail
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
-        nav_view.setupWithNavController(navController)
     }
 }

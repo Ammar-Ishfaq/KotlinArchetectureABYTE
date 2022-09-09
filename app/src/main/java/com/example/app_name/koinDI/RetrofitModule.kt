@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
 import java.util.concurrent.TimeUnit
 
-private const val BASE_URL = "https://www.testing.albassamapp.com/"
+private const val BASE_URL = "https://api.github.com/"
 
 private const val CACHE_FILE_SIZE: Long = 50 * 1000 * 1000 // 50 Mib
 

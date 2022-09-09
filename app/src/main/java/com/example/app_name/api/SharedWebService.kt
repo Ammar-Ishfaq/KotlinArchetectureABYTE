@@ -11,20 +11,18 @@ class SharedWebService(
     private val app: MyCustomApp
 ) {
 
-    /**
-     * Newly implementation of the new architecture ie here
-     */
+
     private val dispatcher = Dispatchers.IO
 
-    suspend fun getAllUserList() = withContext(dispatcher) {
+    suspend fun getAllUserList(sinceId: Int) = withContext(dispatcher) {
         safeApiCall {
-            Result.success(apiServices.getAllUser())
+            Result.success(apiServices.getAllUser(sinceId))
         }
     }
 
-    suspend fun getParticularUserById(id: Int) = withContext(dispatcher) {
+    suspend fun getUserDetailById(id: Int) = withContext(dispatcher) {
         safeApiCall {
-            Result.success(apiServices.getParticularUserById(id))
+            Result.success(apiServices.getUserDetailById(id))
         }
     }
 }
