@@ -1,6 +1,7 @@
 package com.example.app_name.view.activities
 
 import android.os.Bundle
+import android.view.KeyEvent
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -42,4 +43,19 @@ class MainActivity : BaseActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
+
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?) = if (keyCode == KeyEvent.KEYCODE_BACK) {
+        val currentDestination = navController.currentDestination
+        if (currentDestination != null && currentDestination.id == R.id.navigation_user) {
+            moveTaskToBack(true)
+            true
+        } else {
+            super.onBackPressed()
+            false
+        }
+    } else false
+
+    override fun onBackPressed() = Unit
+
 }

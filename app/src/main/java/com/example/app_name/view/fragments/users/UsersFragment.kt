@@ -31,7 +31,7 @@ class UsersFragment :
         setupProgressDialog(viewModel.showHideProgressDialog, dialogHelper)
 
         allUserAdapter = UsersAdapter {
-
+            viewModel.getUserDetailAndNavigate(it.id)
         }
 
         val mLayoutManager = LinearLayoutManager(requireContext())

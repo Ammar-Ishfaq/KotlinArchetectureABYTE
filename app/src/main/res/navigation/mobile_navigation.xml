@@ -22,7 +22,9 @@
         android:label="@string/title_user_detail"
         tools:layout="@layout/fragment_user_detail">
         <argument
-            android:name="UserDetail"
-            app:argType="com.example.app_name.models.userDetailModel.UserDetailResponse" />
+            android:name="user_detail"
+            android:defaultValue="@null"
+            app:argType="com.example.app_name.models.userDetailModel.UserDetailResponse"
+            app:nullable="true" />
     </fragment>
 </navigation>
