@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AcclivousByteProjects/AbyteKotinArch/KotlinArchetectureABYTE/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
+        <entry key="..\:/AcclivousByteProjects/AbyteKotinArch/KotlinArchetectureABYTE/app/src/main/res/layout/fragment_user_detail.xml" value="0.1796875" />
+        <entry key="..\:/AcclivousByteProjects/AbyteKotinArch/KotlinArchetectureABYTE/app/src/main/res/layout/top_title_layout.xml" value="0.17864583333333334" />
         <entry key="..\:/_Ammar/FirstKotlinProject/app/src/main/res/drawable/ic_baseline_bookmark_border_24.xml" value="0.19583333333333333" />
         <entry key="..\:/_Ammar/FirstKotlinProject/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.19583333333333333" />
         <entry key="..\:/_Ammar/FirstKotlinProject/app/src/main/res/layout/activity_home.xml" value="0.1796875" />

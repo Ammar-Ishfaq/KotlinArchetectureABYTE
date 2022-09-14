@@ -2,6 +2,7 @@ package com.example.app_name.view.fragments.users
 
 import android.os.Bundle
 import android.view.ViewGroup
+import androidx.compose.ui.viewinterop.viewModel
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView

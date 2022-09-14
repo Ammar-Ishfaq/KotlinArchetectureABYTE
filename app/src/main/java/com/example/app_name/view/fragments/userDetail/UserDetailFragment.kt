@@ -2,6 +2,7 @@ package com.example.app_name.view.fragments.userDetail
 
 import android.os.Bundle
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.app_name.R
 import com.example.app_name.extensions.setupProgressDialog
 import com.example.app_name.koinDI.userDetailModule
@@ -30,10 +31,23 @@ class UserDetailFragment :
         setupProgressDialog(viewModel.showHideProgressDialog, dialogHelper)
 
         navArgs.userDetail?.let {
-            Glide.with(mRootView.fragment_user_detial_image_view).load(it.avatarUrl)
-                .into(mRootView.fragment_user_detial_image_view)
+            if (it.avatarUrl == null) {
+                mRootView.fragment_user_detial_image_view.setImageResource(R.drawable.ic_baseline_person_24)
+            } else {
+                Glide.with(mRootView.fragment_user_detial_image_view).load(it.avatarUrl)
+                    .into(mRootView.fragment_user_detial_image_view)
+            }
 
             mRootView.fragment_user_detail_name.text = it.name
+
+//            mRootView.fragment_user_detail_followers.text = it.followers.toString()
+//            mRootView.fragment_user_detail_following.text = it.following.toString()
+
+            mRootView.fragment_user_detail_company.text = it.company
+            mRootView.fragment_user_detail_blog.text = it.blog
+            mRootView.fragment_user_detail_location.text = it.location
+            mRootView.fragment_user_detail_bio.text = it.bio
+
         }
 
 
